@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<robot name="mycar">
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.25 0.16 0.05"/>
+      </geometry>
+       <material name="blue">  
+        <color rgba="0 0 0.8 1"/>  
+      </material>  
+    </visual>
+  </link>
+
+   <link name="head">
+    <visual>
+      <geometry>
+         <box size="0.08 0.08 0.02"/>
+      </geometry>
+       <material name="white">  
+        <color rgba="1 1 1 1"/>  
+      </material>  
+    </visual>
+  </link>
+
+  <link name="left_foward">
+    <visual>
+      <origin rpy="1.57 1.57075 0" />
+      <geometry>
+        <cylinder length="0.02" radius="0.025"/>
+      </geometry>
+       <material name="white">  
+        <color rgba="1 1 1 1"/>  
+      </material>  
+    </visual>
+  </link>
+
+   <link name="right_foward">
+    <visual>
+      <origin rpy="1.57 1.57075 0" />
+      <geometry>
+        <cylinder length="0.02" radius="0.025"/>
+      </geometry>
+       <material name="white">  
+        <color rgba="1 1 1 1"/>  
+      </material>  
+    </visual>
+  </link>
+
+    <link name="left_back">
+    <visual>
+      <origin rpy="1.57 1.57075 0" />
+      <geometry>
+        <cylinder length="0.02" radius="0.025"/>
+      </geometry>
+       <material name="white">  
+        <color rgba="1 1 1 1"/>  
+      </material>  
+    </visual>
+  </link>
+
+   <link name="right_back">
+    <visual>
+      <origin rpy="1.57 1.57075 0" />
+      <geometry>
+        <cylinder length="0.02" radius="0.025"/>
+      </geometry>
+       <material name="white">  
+        <color rgba="1 1 1 1"/>  
+      </material>  
+    </visual>
+  </link>
+
+  <joint name="base_to_head" type="fixed">
+    <parent link="base_link"/>
+    <child link="head"/>
+    <origin xyz="0.08 0.0 0.035"/>
+  </joint>
+
+  <joint name="base_to_leftF" type="continuous">
+    <axis xyz="0 1 0"/>
+    <parent link="base_link"/>
+    <child link="left_foward"/>
+    <origin xyz="0.08 0.085 -0.03"/>
+  </joint>
+
+ <joint name="base_to_rightF" type="continuous">
+    <axis xyz="0 1 0"/>
+    <parent link="base_link"/>
+    <child link="right_foward"/>
+    <origin xyz="0.08 -0.085 -0.03"/>
+  </joint>
+
+  <joint name="base_to_leftB" type="continuous">
+    <axis xyz="0 1 0"/>
+    <parent link="base_link"/>
+    <child link="left_back"/>
+    <origin xyz="-0.08 0.085 -0.03"/>
+  </joint>
+
+ <joint name="base_to_rightB" type="continuous">
+    <axis xyz="0 1 0"/>
+    <parent link="base_link"/>
+    <child link="right_back"/>
+    <origin xyz="-0.08 -0.085 -0.03"/>
+  </joint>
+</robot>
+
