@@ -7,8 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/dtrobot/car/devel:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/dtrobot/car/devel/lib:$LD_LIBRARY_PATH"
 export PWD="/home/dtrobot/car/build"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/dtrobot/car/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/dtrobot/car/src:$ROS_PACKAGE_PATH"

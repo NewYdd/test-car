@@ -1,2 +1,2 @@
-smartcar
+smartcar:test
 -DCATKIN_DEVEL_PREFIX=/home/dtrobot/car/devel -DCMAKE_INSTALL_PREFIX=/home/dtrobot/car/install -G Unix Makefiles
